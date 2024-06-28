@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const port = process.env.PORT || 3001;
-
+app.use(express.json());
 app.get('/', (req, res) => {
     console.log('Received a GET request: ');
     console.log(req.query);
@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
     console.log('Received a POST request: ');
-    console.log(req);
+    console.log(req.body);
     res.status(200).send();
 });
 
