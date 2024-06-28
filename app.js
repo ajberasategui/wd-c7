@@ -8,6 +8,12 @@ app.get('/', (req, res) => {
     res.status(200).send();
 });
 
+app.post('/', (req, res) => {
+    console.log('Received a request: ');
+    console.log(req.body);
+    res.status(200).send();
+});
+
 const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
 server.keepAliveTimeout = 120 * 1000;
