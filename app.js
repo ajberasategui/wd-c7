@@ -10,7 +10,8 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
     console.log('Received a POST request: ');
-    console.log(req.body);
+    console.log({ query: req.query });
+    console.log({ body: req.body });
     res.status(200).send();
 });
 
