@@ -3,13 +3,13 @@ const app = express();
 const port = process.env.PORT || 3001;
 
 app.get('/', (req, res) => {
-    console.log('Received a request: ');
-    console.log(req);
+    console.log('Received a GET request: ');
+    console.log(req.query);
     res.status(200).send();
 });
 
 app.post('/', (req, res) => {
-    console.log('Received a request: ');
+    console.log('Received a POST request: ');
     console.log(req);
     res.status(200).send();
 });
