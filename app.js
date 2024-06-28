@@ -12,6 +12,7 @@ app.post('/', (req, res) => {
     console.log('Received a POST request: ');
     console.log({ query: req.query });
     console.log({ body: req.body });
+    console.log({ headers: req.headers });
     res.status(200).send();
 });
 
