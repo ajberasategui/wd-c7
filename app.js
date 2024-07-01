@@ -5,7 +5,7 @@ app.use(express.json());
 app.get('/', (req, res) => {
     console.log('Received a GET request: ');
     console.log(req.query);
-    res.status(200).send();
+    res.status(400).send();
 });
 
 app.post('/', (req, res) => {
@@ -13,7 +13,7 @@ app.post('/', (req, res) => {
     console.log({ query: req.query });
     console.log({ body: req.body });
     console.log({ headers: req.headers });
-    res.status(200).send();
+    res.status(400).send();
 });
 
 const server = app.listen(port, () => console.log(`Example app listening on port ${port}!`));
